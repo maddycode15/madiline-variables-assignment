@@ -26,9 +26,11 @@ namespace madeline_variables
             string GameName;
             String Studio;
             float percentile;
+           
 
             // setting up values
            HP  = 100;
+            Punch = 20;
             score = 0;
             enemyvalue = 250;
             Slash = -20;
@@ -51,7 +53,9 @@ namespace madeline_variables
 
 
 
-            Console.WriteLine("health" + " " + HP + " ");
+            Console.WriteLine("player health" + " " + HP + " ");
+
+            Console.WriteLine("enemy health" + " " + Enemy_Health);
 
             Console.WriteLine("score" + ' ' + score); 
  
@@ -61,11 +65,26 @@ namespace madeline_variables
 
             HP = HP + Slash;
 
-            Console.WriteLine("health" + " " + HP + " ");
+            Console.WriteLine("player health" + " " + HP + " ");
+
+            Console.WriteLine("enemy health" + " " + Enemy_Health);
 
             Console.WriteLine("score" + ' ' + score);
 
+            Console.WriteLine(realName + ' ' + "uses punch " + "for" + " " + Punch + " " + "damage");
 
+            Enemy_Health = Enemy_Health - Punch;
+
+            Console.WriteLine("player health" + " " + HP + " ");
+
+            Console.WriteLine("enemy health" + " " + Enemy_Health);
+
+            Console.WriteLine("enemy has been defeated");
+
+            score = score + enemyvalue;
+
+            Console.WriteLine("score" + " " + score);
+            
 
             Console.WriteLine();
             Console.WriteLine("press any key to exit...");
